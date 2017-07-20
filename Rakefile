@@ -10,7 +10,7 @@ task :update do
   # Commit the changes and push to both GitHub and deis
   run("git commit -asm 'Update model with #{new_tweets[0]}'")
   run('git push origin master')
-  run('git push deis master')
+  run('git push heroku master')
 end
 
 task default: :update
